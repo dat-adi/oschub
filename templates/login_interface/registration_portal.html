@@ -7,7 +7,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
-        <h1>Hello Registration Portal here.</h1>
-        {{ advice }}
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Registration</h1>
+                {{ advice }}
+                <a href="{% url 'login_interface:main_page' %}">Back to Main Page</a>
+            </div>
+        </div>
     </body>
 </html>

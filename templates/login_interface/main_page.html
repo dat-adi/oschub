@@ -15,14 +15,14 @@
                 <div class="card-body">
                     <h5 class="card-title">Welcome Back!</h5>
                     <p class="card-text">Join us for the next event in line.</p>
-                    <a href="login_portal.html" class="btn btn-primary">Log In</a>
+                    <a href="{% url 'login_interface:login_portal' %}" class="btn btn-primary">Log In</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Register</h5>
                     <p class="card-text">Join us and be a part of the Open Source Community.</p>
-                    <a href="registration_portal.html" class="btn btn-primary">Sign Up</a>
+                    <a href="{% url 'login_interface:registration_portal' %}" class="btn btn-primary">Sign Up</a>
                 </div>
             </div>
         </div>

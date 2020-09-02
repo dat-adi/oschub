@@ -1,5 +1,8 @@
-from django.urls import path, include
+from django.urls import path
 from login_interface import views
+
+# TEMPLATE TAGGING
+app_name = 'login_interface'
 
 urlpatterns = [
     path('', views.index, name='main_page'),
