@@ -7,6 +7,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
+        <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-brand" href="{% url 'login_interface:main_page' %}">OscHub</a></li>
+                    <li><a class="navbar-link" href="{% url 'login_interface:login_portal' %}">Login</a></li>
+                    <li><a class="navbar-link" href="{% url 'login_interface:registration_portal' %}">Register</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="container">
             {% block body_block %}
             {% endblock %}
