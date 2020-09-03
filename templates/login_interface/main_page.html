@@ -1,30 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'login_interface/base.html' %}
+{% block body_block %}
     <title>Main Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="jumbotron">
-                <h1>OSCHUB</h1>
-                <h2>{{ advice }}</h2>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Welcome Back!</h5>
-                    <p class="card-text">Join us for the next event in line.</p>
-                    <a href="{% url 'login_interface:login_portal' %}" class="btn btn-primary">Log In</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Register</h5>
-                    <p class="card-text">Join us and be a part of the Open Source Community.</p>
-                    <a href="{% url 'login_interface:registration_portal' %}" class="btn btn-primary">Sign Up</a>
-                </div>
-            </div>
+    <div class="jumbotron">
+        <h1>OSCHUB</h1>
+        <h2>{{ advice }}</h2>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Welcome Back!</h5>
+            <p class="card-text">Join us for the next event in line.</p>
+            <a href="{% url 'login_interface:login_portal' %}" class="btn btn-primary">Log In</a>
         </div>
-    </body>
-</html>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Register</h5>
+            <p class="card-text">Join us and be a part of the Open Source Community.</p>
+            <a href="{% url 'login_interface:registration_portal' %}" class="btn btn-primary">Sign Up</a>
+        </div>
+    </div>
+{% endblock %}

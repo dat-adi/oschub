@@ -1,17 +1,7 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Main Page</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="jumbotron">
-                <h1>This is login portal.</h1>
-                <h2>Still being set up though.</h2>
-            </div>
-        </div>
-    </body>
-</html>
+{% extends 'login_interface/base.html' %}
+{% block body_block %}
+    <title>Main Page</title>
+        <h1>This is login portal.</h1>
+        <h2>Still being set up though.</h2>
+{% endblock %}

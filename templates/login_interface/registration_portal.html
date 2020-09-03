@@ -1,18 +1,8 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Registration Portal</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Registration</h1>
-                {{ advice }}
-                <a href="{% url 'login_interface:main_page' %}">Back to Main Page</a>
-            </div>
-        </div>
-    </body>
-</html>
+{% extends 'login_interface/base.html' %}
+{% block body_block %}
+    <title>Registration Portal</title>
+        <h1>Registration</h1>
+        {{ advice }}
+        <a href="{% url 'login_interface:main_page' %}" class="btn btn-primary">Back to Main Page</a>
+{% endblock %}
