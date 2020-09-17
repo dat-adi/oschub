@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 # Create your models here.
@@ -11,3 +12,6 @@ class Event(models.Model):
 
     def __str__(self):
         return self.event_name
+
+    def get_absolute_url(self):
+        return reverse("event_regis:detail", kwargs={'pk': self.pk})

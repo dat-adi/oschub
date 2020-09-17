@@ -1,0 +1,7 @@
+{% extends 'event_regis/base_event_regis.html' %}
+    <title>Event Home Page</title>
+    {% block body_block %}
+        <h1>Welcome to the event home page</h1>
+        <a class="btn btn-primary" href="{% url 'event_regis:list' %}">Event List</a>
+        <a class="btn btn-primary" href="{% url 'event_regis:create' %}">Register an Event</a>
+    {% endblock %}

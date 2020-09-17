@@ -1,0 +1,10 @@
+{% extends 'event_regis/base_event_regis.html' %}
+    <title>Event List View</title>
+    {% block body_block %}
+        <h1>Welcome to the event list</h1>
+        <ol>
+            {% for event in events %}
+                <h2><li><a href="{{ event.id }}">{{ event.event_name }}</a></li></h2>
+            {% endfor %}
+        </ol>
+    {% endblock %}
