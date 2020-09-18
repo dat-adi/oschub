@@ -2,9 +2,10 @@
     <title>Event List View</title>
     {% block body_block %}
         <h1>Welcome to the event list</h1>
-        <ol>
-            {% for event in events %}
-                <h2><li><a href="{{ event.id }}">{{ event.event_name }}</a></li></h2>
-            {% endfor %}
-        </ol>
+        {% for event in events %}
+            <div>
+                <h2><a href="{% url 'event_regis:detail' pk=event.pk %}">{{ event.event_name }}</a></h2>
+                <p>Event Date : {{ event.event_start_time }}</p>
+            </div>
+        {% endfor %}
     {% endblock %}

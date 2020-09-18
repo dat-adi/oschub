@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.utils import timezone
 from django.views.generic import (TemplateView, CreateView,
                                   ListView, DetailView,
                                   UpdateView, DeleteView)
@@ -16,5 +17,9 @@ class EventListView(ListView):
     model = models.Event
 
 
-class EventHomePage(TemplateView):
+class EventHomeView(TemplateView):
     template_name = 'event_regis/event_home_page.html'
+
+
+class EventDetailView(DetailView):
+    model = models.Event

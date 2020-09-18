@@ -1,3 +1,6 @@
 {% extends 'event_regis/base_event_regis.html' %}
 {% block body_block %}
+    <h1>{{ event.event_name }}</h1>
+    <h2>{{ event.event_start_time }}</h2>
+    <p>{{ event.event_details }}</p>
 {% endblock %}
