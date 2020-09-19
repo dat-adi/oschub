@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('login_interface.urls')),
     path('accounts/login/', LoginView.as_view(template_name='registration/login.html'), name='login'),
-    path('accounts/logout/', LogoutView.as_view(), name='logout', kwargs={'next_page': '/'}),
+    path('accounts/logout/', LogoutView.as_view(), name='logout'),
     path('dashboard/', include('dashboard.urls')),
     path('events/', include('event_regis.urls')),
     path('admin/', admin.site.urls),

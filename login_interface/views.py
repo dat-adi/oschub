@@ -1,20 +1,10 @@
 from django.shortcuts import render
 from login_interface.forms import UserForm
-from django.views.generic import (TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView)
+from django.views.generic import TemplateView
 
 
-def index(request):
-    index_list = {
-        'advice': 'Still being set up though.',
-    }
-    return render(request, 'login_interface/main_page.html', context=index_list)
-
-
-def login_portal(request):
-    login_list = {
-        'advice': 'Login with your university email for easier verification',
-    }
-    return render(request, 'login_interface/templates/registration/login.html', context=login_list)
+class IndexView(TemplateView):
+    template_name = "login_interface/main_page.html"
 
 
 def registration_portal(request):

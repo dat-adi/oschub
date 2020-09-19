@@ -5,6 +5,6 @@ from login_interface import views
 app_name = 'login_interface'
 
 urlpatterns = [
-    path('', views.index, name='main_page'),
+    path('', views.IndexView.as_view(), name='main_page'),
     path('accounts/register/', views.registration_portal, name="registration_portal"),
 ]

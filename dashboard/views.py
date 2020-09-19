@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-class WelcomeView(TemplateView):
-    template_name = "dashboard/welcome.html"
+class WelcomeView(LoginRequiredMixin, TemplateView):
+    template_name = "dashboard/home.html"
 
 
