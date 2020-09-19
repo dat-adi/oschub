@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 {% extends 'login_interface/base.html' %}
 {% block body_block %}
-    <title>Main Page</title>
-        <h1>This is the login portal.</h1>
-        <h2>Still being set up though.</h2>
-        <a class="btn btn-primary" href="{% url 'dashboard:welcome' %}">Next Section</a>
+    <h1>This is the login portal.</h1>
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-primary" type="submit" value="Login">
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+    <a class="btn btn-primary" href="{% url 'dashboard:welcome' %}">Next Section</a>
 {% endblock %}
