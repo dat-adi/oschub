@@ -14,7 +14,7 @@ def login_portal(request):
     login_list = {
         'advice': 'Login with your university email for easier verification',
     }
-    return render(request, 'login_interface/login_portal.html', context=login_list)
+    return render(request, 'login_interface/templates/registration/login.html', context=login_list)
 
 
 def registration_portal(request):
