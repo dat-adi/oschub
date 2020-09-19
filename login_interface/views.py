@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from login_interface.forms import UserForm
 from django.views.generic import (TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView)
 
 
@@ -22,7 +22,22 @@ def login_portal(request):
 
 
 def registration_portal(request):
-    registration_list = {
-        'advice': 'Still isn\'t up.'
-    }
-    return render(request, 'login_interface/registration_portal.html', context=registration_list)
+    registered = False
+    if request.method == 'POST':
+        user_form = UserForm(data=request.POST)
+
+        if user_form.is_valid():
+            user = user_form.save()
+            user.set_password(user.password)
+            user.save()
+
+            registered = True
+        else:
+            print(user_form.errors)
+    else:
+        user_form = UserForm()
+
+    return render(request, 'login_interface/registration_portal.html', context={'registered': registered,
+                                                                                'user_form': user_form})
+
+

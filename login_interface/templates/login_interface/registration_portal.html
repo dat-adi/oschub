@@ -3,6 +3,6 @@
 {% block body_block %}
     <title>Registration Portal</title>
         <h1>Registration</h1>
-        {{ advice }}
+        {{ user_form.as_p }}
         <a href="{% url 'login_interface:main_page' %}" class="btn btn-primary">Back to Main Page</a>
 {% endblock %}

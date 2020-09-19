@@ -3,4 +3,6 @@
     <h1>{{ event.event_name }}</h1>
     <h2>{{ event.event_start_time }}</h2>
     <p>{{ event.event_details }}</p>
+    <a class="btn btn-primary" href="{% url 'event_regis:event_update' pk=event.pk %}">Edit</a>
+    <a class="btn btn-primary" href="{% url 'event_regis:event_delete' pk=event.pk %}">Delete</a>
 {% endblock %}

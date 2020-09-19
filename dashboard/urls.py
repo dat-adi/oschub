@@ -5,5 +5,4 @@ app_name = 'dashboard'
 
 urlpatterns = [
     path('', views.WelcomeView.as_view(), name="welcome"),
-    path('registration/', views.registration, name='registration_page'),
 ]
