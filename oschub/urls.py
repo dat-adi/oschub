@@ -24,5 +24,6 @@ urlpatterns = [
     path('accounts/logout/', LogoutView.as_view(), name='logout'),
     path('dashboard/', include('dashboard.urls')),
     path('events/', include('event_regis.urls')),
-    path('admin/', admin.site.urls),
 ]
+
+# TODO: Need to add in the live stream application

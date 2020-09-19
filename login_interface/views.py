@@ -27,3 +27,4 @@ def registration_portal(request):
                                                                                 'user_form': user_form})
 
 
+# TODO: Need to create a user profile view so that users can check their profile.
