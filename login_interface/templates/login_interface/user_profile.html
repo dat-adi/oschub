@@ -1,0 +1,9 @@
+{% extends 'login_interface/base.html' %}
+{% block body_block %}
+    <title>User Profile</title>
+    {% if user.is_authenticated %}
+        <h1>{{ user.username }}</h1>
+        <h2>{{ user.email }}</h2>
+        <h2>{{ request.user.university_id }}</h2>
+    {% endif %}
+{% endblock %}

@@ -6,5 +6,6 @@ app_name = 'login_interface'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='main_page'),
-    path('accounts/register/', views.registration_portal, name="registration_portal"),
+    path('user/', views.UserProfileView.as_view(), name="user_profile"),
+    path('accounts/register/', views.UserRegistrationView.as_view(), name="registration_portal"),
 ]

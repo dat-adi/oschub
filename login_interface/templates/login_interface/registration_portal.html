@@ -3,6 +3,10 @@
 {% block body_block %}
     <title>Registration Portal</title>
         <h1>Registration</h1>
-        {{ user_form.as_p }}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Sign Up</button>
+        </form>
         <a href="{% url 'login_interface:main_page' %}" class="btn btn-primary">Back to Main Page</a>
 {% endblock %}
