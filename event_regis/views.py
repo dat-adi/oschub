@@ -41,3 +41,6 @@ class EventUpdateView(LoginRequiredMixin, UpdateView):
 class EventDeleteView(LoginRequiredMixin, DeleteView):
     model = models.Event
     success_url = reverse_lazy('event_regis:list')
+
+
+# TODO: Need to add in the method to send a call to the API

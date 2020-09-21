@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'login_interface',
     'dashboard',
     'event_regis',
+    'livestream_app',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/dashboard/'
 LOGOUT_REDIRECT_URL = '/'
+
+STATICFILES_DIRS = [
+    'static',
+    '/var/www/static/',
+]

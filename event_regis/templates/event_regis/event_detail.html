@@ -5,4 +5,5 @@
     <p>{{ event.event_details }}</p>
     <a class="btn btn-primary" href="{% url 'event_regis:event_update' pk=event.pk %}">Edit</a>
     <a class="btn btn-primary" href="{% url 'event_regis:event_delete' pk=event.pk %}">Delete</a>
+    <a class="btn btn-primary" href="{% url 'livestream_app:livestream_view' pk=event.pk %}">Livestream</a>
 {% endblock %}
