@@ -1,6 +1,6 @@
 {% extends 'livestream_app/base.html' %}
 {% block livestream_block %}
-    <iframe src="{{ event.live_stream_link }}" frameborder="0" allowfullscreen></iframe>
+    <iframe src="{{ event.live_stream_link }}" allowfullscreen></iframe>
 {% endblock %}
 {% block body_block %}
     <h1>{{ event.event_name }}</h1>

@@ -7,4 +7,3 @@ class LiveStreamView(DetailView):
     template_name = "livestream_app/livestream_event.html"
     model = models.Event
 
-# TODO: iframe src needs to be able to take in from event components.
