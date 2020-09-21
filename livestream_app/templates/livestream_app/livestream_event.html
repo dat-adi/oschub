@@ -5,8 +5,6 @@
 {% block body_block %}
     <h1>{{ event.event_name }}</h1>
     <p>{{ event.event_details }}</p>
-    <p>{{ event.live_stream_link }}</p>
-    <p>{{ event.documentation_link }}</p>
     <a class="btn btn-primary" href="#">Check in</a>
     <a class="btn btn-primary" href="{{ event.documentation_link }}">Documentation</a>
 {% endblock %}
