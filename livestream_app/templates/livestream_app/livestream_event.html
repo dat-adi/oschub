@@ -1,10 +1,13 @@
 {% extends 'livestream_app/base.html' %}
 {% block livestream_block %}
-    <iframe src="https://www.youtube.com/embed/4-PCWGrHK88" frameborder="0"></iframe>
+    <iframe src="{{ event.live_stream_link }}" frameborder="0" allowfullscreen></iframe>
 {% endblock %}
 {% block body_block %}
     <h1>{{ event.event_name }}</h1>
+    <p>{{ event.event_details }}</p>
+    <p>{{ event.live_stream_link }}</p>
+    <p>{{ event.documentation_link }}</p>
     <a class="btn btn-primary" href="#">Check in</a>
-    <a class="btn btn-primary" href="#">Documentation</a>
+    <a class="btn btn-primary" href="{{ event.documentation_link }}">Documentation</a>
 {% endblock %}
 

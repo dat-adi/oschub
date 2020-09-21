@@ -4,5 +4,5 @@ from . import views
 app_name = "livestream_app"
 
 urlpatterns = [
-    re_path(r'^event/(?P<pk>\d+)/livestream/$', views.LiveStreamView.as_view(), name='livestream_view'),
+    re_path(r'^(?P<pk>\d+)/$', views.LiveStreamView.as_view(), name='livestream_view'),
 ]
