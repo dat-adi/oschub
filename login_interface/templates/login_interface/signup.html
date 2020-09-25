@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'login_interface/base.html' %}
+{% block body_block %}
+    <title>Registration Portal</title>
+    <h1>Sign Up</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <p>
+            {{ field.label_tag }}<br>
+            {{ field }}
+            </p>
+        {% endfor %}
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+    </form>
+{% endblock %}
