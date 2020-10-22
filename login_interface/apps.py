@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class LoginInterfaceConfig(AppConfig):
-    name = 'login_interface'
+    name = "login_interface"

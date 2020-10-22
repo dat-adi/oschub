@@ -8,10 +8,10 @@ class Event(models.Model):
     event_details = models.TextField()
     live_stream_link = models.URLField(max_length=128, unique=True, blank=True)
     documentation_link = models.URLField(max_length=128, unique=True, blank=True)
+    spreadsheet_link = models.URLField(max_length=235, unique=True, blank=False)
 
     def get_absolute_url(self):
-        return reverse("event_regis:detail", kwargs={'pk': self.pk})
+        return reverse("event_regis:detail", kwargs={"pk": self.pk})
 
     def __str__(self):
         return self.event_name
-

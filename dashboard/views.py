@@ -5,5 +5,3 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class WelcomeView(LoginRequiredMixin, TemplateView):
     template_name = "dashboard/home.html"
-
-
